@@ -269,7 +269,7 @@ class Display extends Component {
         </div>
 
         <div className="row">
-          <div className="col-sm-6 col-md-6 col-lr-6 row1">
+          <div className="col-sm-6 col-md-6 col-lr-6 row2">
             <Buttons name="0" onclick1={this.btnHandle} />
           </div>
           <div className="col-sm-3 col-md-3 col-lr-3 row1">
