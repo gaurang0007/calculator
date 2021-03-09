@@ -1,0 +1,11 @@
+
+
+.button{
+    width: 100%;
+    padding: 14px;
+    border: 0.0001em solid #858694 !important;
+    outline: none !important;
+    background-color: #E0E0E0;
+    font-size: 40px;
+    font-weight: 500;
+}
