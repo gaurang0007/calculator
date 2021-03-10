@@ -5,9 +5,8 @@ class Buttons extends Component {
   state = {};
   render() {
     return (
-      <button
-        className="button"
-        onClick={() => this.props.onclick1(this.props.name)}
+      <button className="button"
+        onClick={() => this.props.onclick1(this.props.value)}
         style={{ backgroundColor: this.props.bgcolor, color: this.props.color }}
       >
         {this.props.name}
