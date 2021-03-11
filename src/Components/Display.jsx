@@ -61,10 +61,11 @@ class Display extends Component {
       stringToEvaluate = `${firstOperand}${operator}${displayValue}`;
       try {
         newDisplayValue = evaluate(stringToEvaluate);
-      } catch (e) {
+      } 
+      catch (e) {
         newDisplayValue = "0";
       }
-      if (newDisplayValue === "Infinity") {
+      if (newDisplayValue === Infinity) {
         newDisplayValue = "0";
       }
       newOperator = newKeyValue === "=" ? null : newKeyValue;
@@ -75,12 +76,14 @@ class Display extends Component {
         operator: newOperator,
         clearAll: false,
       });
+      
     }
   };
 
   processPoint = (newKeyValue) => {
     const { displayValue, waitingForOperand } = this.state;
-    const needPoint = displayValue.indexOf(".") === -1 ? true : false;
+    
+    let needPoint = `${displayValue}`.indexOf(".") === -1 ? true : false;
     let newDisplayValue = null;
 
     if (waitingForOperand) {
@@ -93,7 +96,7 @@ class Display extends Component {
       if (needPoint) {
         newDisplayValue = `${displayValue}${newKeyValue}`;
         this.setState({
-          displayValue: newDisplayValue,
+          displayValue: `${newDisplayValue}`,
           waitingForOperand: false,
           clearAll: false,
         });
