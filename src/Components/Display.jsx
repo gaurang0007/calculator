@@ -13,7 +13,7 @@ class Display extends Component {
       displayValue: "0",
       operator: null,
       waitingForOperand: false,
-      firstOperand: "0",
+      firstOperand: false,
       clearAll: true,
     };
   }
@@ -49,7 +49,7 @@ class Display extends Component {
     let newOperator = null;
     let stringToEvaluate = null;
 
-    if (firstOperand === "0" || operator == null || waitingForOperand) {
+    if (firstOperand === false || operator == null || waitingForOperand) {
       this.setState({
         waitingForOperand: true,
         firstOperand: displayValue,
@@ -125,7 +125,7 @@ class Display extends Component {
   processClear = () => {
     this.setState({
       displayValue: "0",
-      firstOperand: "0",
+      firstOperand: false,
       operator: null,
       waitingForOperand: false,
       clearAll: true,
